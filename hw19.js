@@ -9,4 +9,32 @@ for (let i=0; i<numbers.length-1; i++){
         }
     }
 }
-console.log(numbers)        
+console.log(numbers)  
+
+
+function binarySearch(numbers, target) {
+    let left = 0;
+    let right = numbers.length - 1;
+
+    while (left <= right) {
+        let middle = Math.floor((left + right) / 2);
+
+        if (numbers[middle] === target) {
+            return middle;
+        }
+
+        if (numbers[middle] < target) {
+            left = middle + 1;
+        } else {
+            right = middle - 1;
+        }
+    }
+
+    return -1;
+}
+
+let numbers = [1, 2, 4, 5, 9];
+
+console.log(binarySearch(numbers, 5)); // 3
+console.log(binarySearch(numbers, 7)); // -1
+
