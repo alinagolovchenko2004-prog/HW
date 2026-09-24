@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.app {
+  width: min(700px, calc(100% - 32px));
+  margin: 60px auto;
+  padding: 32px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.search-form {
+  display: grid;
+  gap: 10px;
+}
+
+.search-form input {
+  width: 100%;
+  padding: 11px 12px;
+  margin-bottom: 8px;
+  border: 1px solid #aaa;
+  border-radius: 7px;
+  font: inherit;
+}
+
+.search-form button,
+.modal button {
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.search-form button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.result-block {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.role {
+  font-weight: bold;
+}
+
+.result {
+  white-space: pre-wrap;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+.modal {
+  max-width: 420px;
+  border: 0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}

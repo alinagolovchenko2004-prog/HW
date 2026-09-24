@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Помощник для холодильника</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Что приготовить?</h1>
+
+    <form id="search-form" class="search-form">
+      <label for="user-name">Имя пользователя</label>
+      <input
+        id="user-name"
+        name="userName"
+        type="text"
+        placeholder="Например, Bill"
+      />
+
+      <label for="dish-title">Название блюда</label>
+      <input
+        id="dish-title"
+        name="dishTitle"
+        type="text"
+        placeholder="Например, борщ"
+      />
+
+      <button id="search-button" type="submit">Искать</button>
+    </form>
+
+    <section class="result-block">
+      <h2>Результат</h2>
+      <p id="role" class="role"></p>
+      <pre id="result" class="result"></pre>
+    </section>
+  </main>
+
+  <dialog id="error-modal" class="modal">
+    <h2>Ошибка</h2>
+    <p id="error-text"></p>
+    <button id="close-modal" type="button">Закрыть</button>
+  </dialog>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
